@@ -19,4 +19,11 @@ body {
   position: absolute;
   top: 8vh;
   left: 2vw;
+  border-bottom: 1px solid black;
+}
+#tottime{
+  position: absolute;
+  top: 15vh;
+  left: 2vw;
+  border-bottom: 1px solid black;
 }

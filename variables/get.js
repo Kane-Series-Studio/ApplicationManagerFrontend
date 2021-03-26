@@ -1,4 +1,5 @@
-var _speedconstant = 8.9997e-9;
+setTimeout(() => {
+    var _speedconstant = 8.9997e-9;
 var d = new Date();
 var amount = 150000000;
 
@@ -16,7 +17,11 @@ if (d.getMinutes() != newd.getMinutes()) {
 spd = ((_speedconstant * amount) / di);
 console.log("Time: " + Math.round(di * 1000) / 1000 + "s, \nestimated speed: " + Math.round(spd * 1000) / 1000 + "GHZ");
 
-
-
 document.getElementById('loops').innerHTML = `Running ${amount} Loops`;
 document.getElementById('espro').innerHTML = `Processor: ${estprocessor} ghx processor`
+document.getElementById('tottime').innerHTML = `Time: ${Math.round(di * 1000) / 1000} s`
+}, 1000);
+
+
+
+
