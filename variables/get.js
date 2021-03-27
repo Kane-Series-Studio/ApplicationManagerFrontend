@@ -1,5 +1,4 @@
-setTimeout(() => {
-    var _speedconstant = 8.9997e-9;
+var _speedconstant = 8.9997e-9;
 var d = new Date();
 var amount = 150000000;
 
@@ -16,11 +15,30 @@ if (d.getMinutes() != newd.getMinutes()) {
 }
 spd = ((_speedconstant * amount) / di);
 console.log("Time: " + Math.round(di * 1000) / 1000 + "s, \nestimated speed: " + Math.round(spd * 1000) / 1000 + "GHZ");
-
+var cpu = navigator.hardwareConcurrency
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+    document.getElementById('amorpm').innerHTML = ampm
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i}; 
+    return i;
+  }
 document.getElementById('loops').innerHTML = `Running ${amount} Loops`;
 document.getElementById('espro').innerHTML = `Processor: ${estprocessor} ghx processor`
 document.getElementById('tottime').innerHTML = `Time: ${Math.round(di * 1000) / 1000} s`
-}, 1000);
+document.getElementById('cpuCount').innerHTML = `Cpu: ${cpu}`
+
+document.onload(startTime());
 
 
 

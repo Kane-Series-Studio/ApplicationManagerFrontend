@@ -9,6 +9,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: lighter;
 }
+*{
+  overflow: none;
+  user-select: none;
+}
 #loops{
   position: absolute;
   top: 1vh;
@@ -26,4 +30,28 @@ body {
   top: 15vh;
   left: 2vw;
   border-bottom: 1px solid black;
+}
+#cpuCount{
+  position: absolute;
+  top: 35vh;
+  left: 2vw;
+
+}
+#break1{
+  position: relative;
+  left: -20vw;
+  width: 856px;
+  top: 27vh;
+}
+#time{
+  position: absolute;
+  left: 77vw;
+  top: .5vh;
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+#amorpm{
+  position: absolute;
+  left: 93vw;
+  top: .5vh;
 }
